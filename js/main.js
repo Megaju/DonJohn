@@ -1,4 +1,9 @@
-// menu generator don john
+// HERO MENU GENERATOR
+
+// hidden the button to enter the dungeon
+document.querySelector("#enter").style.display = 'none';
+
+// generate a hero
 document.querySelector("#start").addEventListener("click", openGenerator);
 
 function openGenerator() {
@@ -22,4 +27,7 @@ function generateHero() {
     document.querySelector(".int-value").innerHTML = hero.getInt;
     document.querySelector(".agi-value").innerHTML = hero.getAgi;
     document.querySelector(".potion-value").innerHTML = hero.getPotion;
+
+    document.querySelector("#generate-hero").style.display = 'none';
+    document.querySelector("#enter").style.display = 'block';
 }
