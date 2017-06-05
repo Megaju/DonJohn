@@ -10,23 +10,64 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/donjohn.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Don John</h1>
-        <h2>The Dungeon Explorer</h2>
-    </header>
+<header>
+    <h1>Don John</h1>
+    <h2>The Dungeon Explorer</h2>
+</header>
 
-    <section>
-        <div class="don-john-home">
+<section>
+    <!-- home -->
+    <div class="don-john-home"></div>
+    <button id="start" class="btn btn-start">commencer</button>
+</section>
 
-        </div>
-        <button class="btn btn-start">entrer</button>
-    </section>
+<!-- hero generator -->
+<div class="hero-generator">
+    <h2>Création de Don John</h2>
+    <p>Don John est un explorateur de donjon ! Il ne vit que pour chasser
+    des monstres, éviter des pièges mortels, résoudre des énigmes et
+        ammasser des trésors !</p>
 
-    <footer>
-        <p>Un jeu de Kijewoku, 2017.</p>
-    </footer>
+    <div class="stat-bloc">
+        <div class="stat-icon icon-life"></div>
+        <div class="stat-value life-value">Vie</div>
+    </div>
+
+    <div class="stat-bloc">
+        <div class="stat-icon icon-atk"></div>
+        <div class="stat-value atk-value">Force</div>
+    </div>
+
+    <div class="stat-bloc">
+        <div class="stat-icon icon-def"></div>
+        <div class="stat-value def-value">Endurance</div>
+    </div>
+
+    <div class="stat-bloc">
+        <div class="stat-icon icon-int"></div>
+        <div class="stat-value int-value">Intelligence</div>
+    </div>
+
+    <div class="stat-bloc">
+        <div class="stat-icon icon-agi"></div>
+        <div class="stat-value agi-value">Agilité</div>
+    </div>
+
+    <div class="stat-bloc">
+        <div class="stat-icon icon-potion"></div>
+        <div class="stat-value potion-value">Potion</div>
+    </div>
+
+    <button id="generate-hero" class="btn btn-start">générer</button>
+</div>
+
+<footer>
+    <p>Un jeu de Kijewoku, 2017.</p>
+</footer>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
