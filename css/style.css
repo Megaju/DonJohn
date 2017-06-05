@@ -1,0 +1,80 @@
+/* ============================ */
+/* =========== BASE =========== */
+/* ============================ */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: .65em;
+}
+
+p {
+    margin: 0;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    background-color: #494949;
+}
+
+/* ============================ */
+/* =========== HOME =========== */
+/* ============================ */
+.don-john-home {
+    width: 100vw;
+    height: 80vh;
+    background-image: url("../assets/hero/don-john.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+/* ============================ */
+/* ========== BUTTON ========== */
+/* ============================ */
+.btn {
+    max-width: 320px;
+    margin: 20px;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid #000;
+    transition: .2s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter:brightness(125%);
+}
+
+.btn-start {
+    background-color: #C18E4B;
+    border-color: #413019;
+    color: #413019;
+}
