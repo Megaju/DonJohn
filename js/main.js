@@ -110,27 +110,21 @@ function counter() {
     setTimeout(function(){
         document.querySelector('.counter').style.opacity = ".9";
         document.querySelector(".counter-number").innerHTML = '5';
-        console.log('5');
     }, 1200);
     setTimeout(function(){
         document.querySelector(".counter-number").innerHTML = '4';
-        console.log('4');
     }, 2400);
     setTimeout(function(){
         document.querySelector(".counter-number").innerHTML = '3';
-        console.log('3');
     }, 3600);
     setTimeout(function(){
         document.querySelector(".counter-number").innerHTML = '2';
-        console.log('2');
     }, 4800);
     setTimeout(function(){
         document.querySelector(".counter-number").innerHTML = '1';
-        console.log('1');
     }, 6000);
     setTimeout(function(){
         document.querySelector(".counter-number").innerHTML = 'GO!';
-        console.log('GO !');
     }, 7200);
     setTimeout(function(){
         startExploration();

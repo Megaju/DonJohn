@@ -80,7 +80,7 @@
 .stat-bloc {
     width: 60vw;
     height: 30px;
-    background-color: #fff;
+    background-color: #222;
     border: 2px solid #C18E4B;
 }
 
@@ -120,7 +120,7 @@
     position: relative;
     bottom: 24px;
     font-weight: 700;
-    color: #333;
+    color: #efebe9;
     text-shadow: 0 0 1px #000;
     transition: 1s;
 }
