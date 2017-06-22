@@ -65,6 +65,8 @@ function generateHero() {
 
 // exploration start in easy mode
 function startExploration() {
+    document.querySelector('.view-create').style.opacity = "0";
+    document.querySelector('.game').style.backgroundColor = "#000";
     document.querySelector('.view-top').style.bottom = "0";
 }
 // events to navigate in the dungeon
