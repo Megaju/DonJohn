@@ -31,6 +31,7 @@ p {
 header, footer {
     width: 100vw;
     height: 10vh;
+    z-index: 2;
 }
 
 section {

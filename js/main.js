@@ -33,7 +33,7 @@ function generateHero() {
     document.querySelector('#generate').style.backgroundColor = "#616161";
 
     // counter
-    setTimeout(function(){
+    /*setTimeout(function(){
         console.log('5');
     }, 1200);
     setTimeout(function(){
@@ -51,4 +51,38 @@ function generateHero() {
     setTimeout(function(){
         console.log('GO !');
     }, 7200);
+    setTimeout(function(){
+        startExploration();
+    }, 8400);*/
+    startExploration();
+}
+
+// exploration start in easy mode
+function startExploration() {
+    document.querySelector('.view-left').style.right = "0";
+}
+// event to navigate in the dungeon
+document.querySelector("#left-to-top").addEventListener("click", topChoice);
+document.querySelector("#left-to-right").addEventListener("click", rightChoice);
+
+document.querySelector("#top-to-left").addEventListener("click", leftChoice);
+document.querySelector("#top-to-right").addEventListener("click", rightChoice);
+
+document.querySelector("#right-to-left").addEventListener("click", leftChoice);
+document.querySelector("#right-to-top").addEventListener("click", topChoice);
+
+function leftChoice() {
+    document.querySelector(".view-left").style.right = "0";
+    document.querySelector(".view-top").style.bottom = "100vh";
+    document.querySelector(".view-right").style.left = "100vw";
+}
+function topChoice() {
+    document.querySelector(".view-top").style.bottom = "0";
+    document.querySelector(".view-left").style.right = "100vw";
+    document.querySelector(".view-right").style.left = "100vw";
+}
+function rightChoice() {
+    document.querySelector(".view-right").style.left = "0";
+    document.querySelector(".view-top").style.bottom = "100vh";
+    document.querySelector(".view-left").style.right = "100vw";
 }

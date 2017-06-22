@@ -20,42 +20,31 @@
 }
 
 .view-create {
-    outline: 1px solid red;
-    background-color: rgba(255, 0, 0, .5);
 }
 
 .view-start {
-    outline: 1px solid greenyellow;
-    background-color: rgba(50, 240, 50, .5);
-
     opacity: 0;
 }
 
-.view-left {
-    outline: 1px solid orangered;
-    background-color: rgba(255, 69, 0, .5);
+.view-left, .view-top, .view-right {
+    background-image: url("../assets/background/door.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
+.view-left {
     right: 100vw;
 }
 
 .view-top {
-    outline: 1px solid orange;
-    background-color: rgba(255, 165, 0, .5);
-
     bottom: 100vh;
 }
 
 .view-right {
-    outline: 1px solid orchid;
-    background-color: rgba(218, 112, 214, .5);
-
     left: 100vw;
 }
 
 .view-end {
-    outline: 1px solid cadetblue;
-    background-color: rgba(95, 158, 160, .5);
-
     top: 100vh;
 }
 
