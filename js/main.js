@@ -1,5 +1,3 @@
-window.scroll(0, 1000);
-
 // button to generate our Don John
 document.querySelector("#generate").addEventListener("click", generateHero);
 
@@ -13,22 +11,101 @@ function generateHero() {
         Math.floor(Math.random() * (40 - 60)) + 61,
         Math.floor(Math.random() * (40 - 60)) + 61,
         Math.floor(Math.random() * (40 - 60)) + 61,
-        Math.floor(Math.random() * (1 - 3)) + 4);
+        Math.floor(Math.random() * (0 - 3)) + 4);
 
     // display the values
     document.querySelector(".life-value").innerHTML = hero.getLifeMax;
-    document.querySelector(".atk-value").innerHTML = hero.getAtk;
-    document.querySelector(".def-value").innerHTML = hero.getDef;
-    document.querySelector(".int-value").innerHTML = hero.getInt;
-    document.querySelector(".agi-value").innerHTML = hero.getAgi;
-    document.querySelector(".potion-value").innerHTML = hero.getPotion;
+    if (hero.getLifeMax < 176) {
+        // bad stat
+        document.querySelector(".life-value").style.color = "red";
+    } else if (hero.getLifeMax > 175 && hero.getLifeMax < 225) {
+        // medium stat
+        document.querySelector(".life-value").style.color = "yellow";
+    } else {
+        // good stat
+        document.querySelector(".life-value").style.color = "green";
+    }
+
+    setTimeout(function(){
+        document.querySelector(".atk-value").innerHTML = hero.getAtk;
+        if (hero.getAtk < 46) {
+            // bad stat
+            document.querySelector(".atk-value").style.color = "red";
+        } else if (hero.getAtk > 45 && hero.getAtk < 55) {
+            // medium stat
+            document.querySelector(".atk-value").style.color = "yellow";
+        } else {
+            // good stat
+            document.querySelector(".atk-value").style.color = "green";
+        }
+    }, 1200);
+
+    setTimeout(function(){
+        document.querySelector(".def-value").innerHTML = hero.getDef;
+        if (hero.getDef < 46) {
+            // bad stat
+            document.querySelector(".def-value").style.color = "red";
+        } else if (hero.getDef > 45 && hero.getDef < 55) {
+            // medium stat
+            document.querySelector(".def-value").style.color = "yellow";
+        } else {
+            // good stat
+            document.querySelector(".def-value").style.color = "green";
+        }
+    }, 2400);
+
+    setTimeout(function(){
+        document.querySelector(".int-value").innerHTML = hero.getInt;
+        if (hero.getInt < 46) {
+            // bad stat
+            document.querySelector(".int-value").style.color = "red";
+        } else if (hero.getInt > 45 && hero.getInt < 55) {
+            // medium stat
+            document.querySelector(".int-value").style.color = "yellow";
+        } else {
+            // good stat
+            document.querySelector(".int-value").style.color = "green";
+        }
+    }, 3600);
+
+    setTimeout(function(){
+        document.querySelector(".agi-value").innerHTML = hero.getAgi;
+        if (hero.getAgi < 46) {
+            // bad stat
+            document.querySelector(".agi-value").style.color = "red";
+        } else if (hero.getAgi > 45 && hero.getAgi < 55) {
+            // medium stat
+            document.querySelector(".agi-value").style.color = "yellow";
+        } else {
+            // good stat
+            document.querySelector(".agi-value").style.color = "green";
+        }
+    }, 4800);
+
+    setTimeout(function(){
+        document.querySelector(".potion-value").innerHTML = hero.getPotion;
+        if (hero.getPotion === 1) {
+            // bad stat
+            document.querySelector(".potion-value").style.color = "red";
+        } else if (hero.getPotion === 2) {
+            // medium stat
+            document.querySelector(".potion-value").style.color = "yellow";
+        } else {
+            // good stat
+            document.querySelector(".potion-value").style.color = "green";
+        }
+
+        counter();
+    }, 6000);
 
     // modify button
     document.querySelector('#generate').style.textDecoration = "line-through";
     document.querySelector('#generate').style.color = "#212121";
     document.querySelector('#generate').style.borderColor = "#212121";
     document.querySelector('#generate').style.backgroundColor = "#616161";
+}
 
+function counter() {
     // counter
     setTimeout(function(){
         document.querySelector('.counter').style.opacity = ".9";
