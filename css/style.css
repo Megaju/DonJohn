@@ -29,16 +29,13 @@ p {
 }
 
 header, footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100vw;
     height: 10vh;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    width: 100vw;
     height: 80vh;
     background-color: #494949;
 }
@@ -46,9 +43,15 @@ section {
 /* ============================ */
 /* ========== BUTTON ========== */
 /* ============================ */
+div[class*="choice"] {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
 .btn {
     max-width: 320px;
-    margin: 20px;
+    margin: 20px 0;
     padding: 20px 60px;
     text-transform: uppercase;
     font-weight: 700;
@@ -68,11 +71,16 @@ section {
     color: #413019;
 }
 
-/* --------- specials --------- */
-.dice {
-    width: 125px;
-    height: 125px;
-    background-image: url("../assets/icons/icon-dice.svg");
+.triple-choice {
+    outline:1px solid red;
+}
+
+.triple-choice .btn {
+    padding: 0;
+    margin: 0;
+    width: 30vw;
+    height: 30px;
+    font-size: .7em;
 }
 
 /* ============================ */
@@ -91,10 +99,6 @@ section {
 /* ====== HERO-GENERATOR ====== */
 /* ============================ */
 .hero-generator {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     position: relative;
     top: -80vh;
     right: -100vw;
@@ -116,9 +120,6 @@ section {
 }
 
 .stat-bloc {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 60vw;
     height: 30px;
     background-color: #fff;

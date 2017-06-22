@@ -1,0 +1,39 @@
+.don-john-illustration {
+    width: 100vw;
+    height: 80vh;
+    background-image: url("../assets/hero/don-john.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.view-home, .view-create, .view-left, .view-top, .view-right, .view-end {
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+}
+
+.view-create {
+    outline: 1px solid red;
+    background-color: rgba(255, 0, 0, .5);
+}
+
+.view-left {
+    outline: 1px solid orangered;
+    background-color: rgba(255, 69, 0, .5);
+}
+
+.view-top {
+    outline: 1px solid orange;
+    background-color: rgba(255, 165, 0, .5);
+}
+
+.view-right {
+    outline: 1px solid orchid;
+    background-color: rgba(218, 112, 214, .5);
+}
+
+.view-end {
+    outline: 1px solid cadetblue;
+    background-color: rgba(95, 158, 160, .5);
+}

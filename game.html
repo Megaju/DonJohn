@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Don John - LE JEU</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <header>
+        <h1>Don John</h1>
+        <h2>The Dungeon Explorer</h2>
+    </header>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------- GAME ------------------------------------------ -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <section class="game">
+        <!-- start -->
+        <div class="view-home">
+            <div class="don-john-illustration"></div>
+            <div class="choice">
+                <button id="start" class="btn btn-start">commencer</button>
+            </div>
+        </div>
+
+        <!-- generate your Don John -->
+        <div class="view-create">
+            <h6>VIEW CREATE</h6>
+            <div class="choice">
+                <button id="generate" class="btn btn-start">générer</button>
+            </div>
+        </div>
+
+        <!-- the dungeon -->
+        <div class="view-left">
+            <!-- level easy -->
+            <h6>LEFT</h6>
+            <div class="triple-choice">
+                <button id="left" class="btn btn-start">à gauche</button>
+                <button id="top" class="btn btn-start">en avant</button>
+                <button id="right" class="btn btn-start">à droite</button>
+            </div>
+        </div>
+
+        <div class="view-top">
+            <!-- level normal -->
+            <h6>TOP</h6>
+        </div>
+
+        <div class="view-right">
+            <!-- level hard -->
+            <h6>RIGHT</h6>
+        </div>
+
+        <!-- when the player is dead - GAMEOVER -->
+        <div class="view-end">
+            <h6>GAME-OVER</h6>
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <footer>
+        <p>Un jeu de Kijewoku, 2017.</p>
+    </footer>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <script src="js/main.js"></script>
+</body>
+</html>
