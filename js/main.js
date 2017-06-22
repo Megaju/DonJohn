@@ -1,7 +1,4 @@
-// HERO MENU GENERATOR
-
-// hidden the button to enter the dungeon
-document.querySelector(".view-start").style.display = 'none';
+window.scroll(0, 1000);
 
 // button to generate our Don John
 document.querySelector("#generate").addEventListener("click", generateHero);
