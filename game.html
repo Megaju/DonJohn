@@ -6,9 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Don John - LE JEU</title>
+    <!-- style -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/game.css">
+    <!-- script js -->
+    <script src="js/donjohn.js"></script>
 </head>
 <body>
     <header>
@@ -21,19 +24,59 @@
     <!-- -------------------------------------------------------------------------------- -->
 
     <section class="game">
-        <!-- start -->
-        <div class="view-home">
-            <div class="don-john-illustration"></div>
+        <!-- generate your Don John -->
+        <div class="view-create">
+            <h2>Création de Don John</h2>
+
+            <div class="stats">
+                <div class="stat-title">Vie</div>
+                <div class="stat-bloc">
+                    <div class="stat-icon icon-life"></div>
+                    <span class="stat-value life-value">0</span>
+                </div>
+
+                <div class="stat-title">Force</div>
+                <div class="stat-bloc">
+                    <div class="stat-icon icon-atk"></div>
+                    <span class="stat-value atk-value">0</span>
+                </div>
+
+                <div class="stat-title">Endurance</div>
+                <div class="stat-bloc">
+                    <div class="stat-icon icon-def"></div>
+                    <span class="stat-value def-value">0</span>
+                </div>
+
+                <div class="stat-title">Intelligence</div>
+                <div class="stat-bloc">
+                    <div class="stat-icon icon-int"></div>
+                    <span class="stat-value int-value">0</span>
+                </div>
+
+                <div class="stat-title">Agilité</div>
+                <div class="stat-bloc">
+                    <div class="stat-icon icon-agi"></div>
+                    <span class="stat-value agi-value">0</span>
+                </div>
+
+                <div class="stat-title">Potion</div>
+                <div class="stat-bloc">
+                    <div class="stat-icon icon-potion"></div>
+                    <span class="stat-value potion-value">0</span>
+                </div>
+            </div>
+
             <div class="choice">
-                <button id="start" class="btn btn-start">commencer</button>
+                <button id="generate" class="btn btn-start">générer</button>
             </div>
         </div>
 
-        <!-- generate your Don John -->
-        <div class="view-create">
-            <h6>VIEW CREATE</h6>
+        <!-- start -->
+        <div class="view-start">
+            <div class="don-john-illustration"></div>
+            <h6>VIEW START</h6>
             <div class="choice">
-                <button id="generate" class="btn btn-start">générer</button>
+                <button id="start" class="btn btn-start">commencer</button>
             </div>
         </div>
 
@@ -42,7 +85,6 @@
             <!-- level easy -->
             <h6>LEFT</h6>
             <div class="triple-choice">
-                <button id="left" class="btn btn-start">à gauche</button>
                 <button id="top" class="btn btn-start">en avant</button>
                 <button id="right" class="btn btn-start">à droite</button>
             </div>
@@ -51,11 +93,19 @@
         <div class="view-top">
             <!-- level normal -->
             <h6>TOP</h6>
+            <div class="triple-choice">
+                <button id="left" class="btn btn-start">à gauche</button>
+                <button id="right" class="btn btn-start">à droite</button>
+            </div>
         </div>
 
         <div class="view-right">
             <!-- level hard -->
             <h6>RIGHT</h6>
+            <div class="triple-choice">
+                <button id="left" class="btn btn-start">à gauche</button>
+                <button id="top" class="btn btn-start">en avant</button>
+            </div>
         </div>
 
         <!-- when the player is dead - GAMEOVER -->

@@ -57,6 +57,7 @@ div[class*="choice"] {
     font-weight: 700;
     font-size: 1.2em;
     border: 2px solid #000;
+    outline: 0;
     transition: .2s;
 }
 
@@ -69,10 +70,6 @@ div[class*="choice"] {
     background-color: #C18E4B;
     border-color: #413019;
     color: #413019;
-}
-
-.triple-choice {
-    outline:1px solid red;
 }
 
 .triple-choice .btn {
@@ -93,68 +90,4 @@ div[class*="choice"] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
-}
-
-/* ============================ */
-/* ====== HERO-GENERATOR ====== */
-/* ============================ */
-.hero-generator {
-    position: relative;
-    top: -80vh;
-    right: -100vw;
-    width: 100vw;
-    height: 80vh;
-    background-color: #413019;
-    color: #C18E4B;
-    transition: 1s;
-}
-
-.hero-generator h2 {
-    font-size: 2em;
-}
-
-.hero-generator p {
-    padding: 0 15px;
-    max-width: 420px;
-    font-size: .6em;
-}
-
-.stat-bloc {
-    width: 60vw;
-    height: 30px;
-    background-color: #fff;
-    border: 2px solid #C18E4B;
-}
-
-/* icons */
-.stat-bloc .stat-icon {
-    min-width: 30px;
-    width: 30px;
-    height: 30px;
-    background-color: #000;
-    border-right: 2px solid #C18E4B;
-}
-
-.icon-life {
-    background-image: url("../assets/icons/icon-life.svg");
-}
-.icon-atk {
-    background-image: url("../assets/icons/icon-atk.svg");
-}
-.icon-def {
-    background-image: url("../assets/icons/icon-def.svg");
-}
-.icon-int {
-    background-image: url("../assets/icons/icon-int.svg");
-}
-.icon-agi {
-    background-image: url("../assets/icons/icon-agi.svg");
-}
-.icon-potion {
-    background-image: url("../assets/icons/icon-potion.svg");
-}
-
-/* values */
-.stat-bloc .stat-value {
-    width: 100%;
 }
