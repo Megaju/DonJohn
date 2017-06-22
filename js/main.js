@@ -33,35 +33,41 @@ function generateHero() {
     document.querySelector('#generate').style.backgroundColor = "#616161";
 
     // counter
-    /*setTimeout(function(){
+    setTimeout(function(){
+        document.querySelector('.counter').style.opacity = ".9";
+        document.querySelector(".counter-number").innerHTML = '5';
         console.log('5');
     }, 1200);
     setTimeout(function(){
+        document.querySelector(".counter-number").innerHTML = '4';
         console.log('4');
     }, 2400);
     setTimeout(function(){
+        document.querySelector(".counter-number").innerHTML = '3';
         console.log('3');
     }, 3600);
     setTimeout(function(){
+        document.querySelector(".counter-number").innerHTML = '2';
         console.log('2');
     }, 4800);
     setTimeout(function(){
+        document.querySelector(".counter-number").innerHTML = '1';
         console.log('1');
     }, 6000);
     setTimeout(function(){
+        document.querySelector(".counter-number").innerHTML = 'GO!';
         console.log('GO !');
     }, 7200);
     setTimeout(function(){
         startExploration();
-    }, 8400);*/
-    startExploration();
+    }, 8400);
 }
 
 // exploration start in easy mode
 function startExploration() {
-    document.querySelector('.view-left').style.right = "0";
+    document.querySelector('.view-top').style.bottom = "0";
 }
-// event to navigate in the dungeon
+// events to navigate in the dungeon
 document.querySelector("#left-to-top").addEventListener("click", topChoice);
 document.querySelector("#left-to-right").addEventListener("click", rightChoice);
 

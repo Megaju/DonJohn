@@ -112,7 +112,6 @@
     background-image: url("../assets/icons/icon-potion.svg");
 }
 
-/* values */
 .stat-title {
     margin-top: 5px;
 }
@@ -121,4 +120,29 @@
     position: relative;
     bottom: 24px;
     color: #111;
+}
+
+/* ============================ */
+/* ========== COUNTER ========= */
+/* ============================ */
+.counter {
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    top: 0;
+    right: 0;
+    font-size: 5em;
+    line-height: 80vh;
+    color: #efebe9;
+    transition: .5s;
+    opacity: 0;
+}
+
+.counter-number {
+    padding: 15px 30px;
+    background-color: #413019;
+    border: 3px solid #efebe9;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #000;
+    opacity: .9;
 }
