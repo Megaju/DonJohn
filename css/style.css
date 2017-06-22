@@ -34,11 +34,19 @@ header, footer {
     z-index: 2;
 }
 
+header {
+    line-height: 5vh;
+}
+
 section {
     position: relative;
     width: 100vw;
     height: 80vh;
     background-color: #494949;
+}
+
+footer {
+    line-height: 10vh;
 }
 
 /* ============================ */
