@@ -78,6 +78,7 @@
 }
 
 .stat-bloc {
+    margin-top: 5px;
     width: 60vw;
     height: 30px;
     background-color: #222;
@@ -110,10 +111,6 @@
 }
 .icon-potion {
     background-image: url("../assets/icons/icon-potion.svg");
-}
-
-.stat-title {
-    margin-top: 5px;
 }
 
 .stat-value {
