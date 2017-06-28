@@ -1,32 +1,17 @@
 /**
- * Created by megaju on 05/06/17.
+ * Created by j on 28/06/17.
  */
-class DonJohn {
-    constructor(name, lifeMax, atk, def, int, agi, nbrPotion) {
-        this._life = lifeMax;
-        this._name = name;
-        this._lifeMax = lifeMax;
+class Monster {
+    constructor(name, description, life, atk, def, int, agi, nbrPotion) {
+        this.name = name;
+        this.description = description;
+        this._lifeMax = life;
+        this._life = life;
         this._atk = atk;
         this._def = def;
         this._int = int;
         this._agi = agi;
         this._nbrPotion = nbrPotion;
-    }
-
-    get name() {
-        return this._name;
-    }
-
-    set name(value) {
-        this._name = value;
-    }
-
-    get life() {
-        return this._life;
-    }
-
-    set life(value) {
-        this._life = value;
     }
 
     get lifeMax() {
@@ -35,6 +20,14 @@ class DonJohn {
 
     set lifeMax(value) {
         this._lifeMax = value;
+    }
+
+    get life() {
+        return this._life;
+    }
+
+    set life(value) {
+        this._life = value;
     }
 
     get atk() {
@@ -77,13 +70,3 @@ class DonJohn {
         this._nbrPotion = value;
     }
 }
-
-// generate values
-let hero = new DonJohn(
-    "Don John",
-    150 + (Math.floor(Math.random() * (1 - 100)) + 101), //life
-    Math.floor(Math.random() * (40 - 60)) + 61, //atk
-    Math.floor(Math.random() * (2 - 6)) + 7, //def
-    Math.floor(Math.random() * (40 - 60)) + 61, //int
-    Math.floor(Math.random() * (40 - 60)) + 61, //agi
-    Math.floor(Math.random() * (0 - 3)) + 4); //potion

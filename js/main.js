@@ -1,24 +1,17 @@
+function log(a){console.log(a)}
+
 // button to generate our Don John
 document.querySelector("#generate").addEventListener("click", generateHero);
 
 function generateHero() {
     document.querySelector("#generate").removeEventListener("click", generateHero);
 
-    // generate values
-    var hero = new DonJohn(
-        150 + (Math.floor(Math.random() * (1 - 100)) + 101),
-        Math.floor(Math.random() * (40 - 60)) + 61,
-        Math.floor(Math.random() * (40 - 60)) + 61,
-        Math.floor(Math.random() * (40 - 60)) + 61,
-        Math.floor(Math.random() * (40 - 60)) + 61,
-        Math.floor(Math.random() * (0 - 3)) + 4);
-
     // display the values
-    document.querySelector(".life-value").innerHTML = hero.getLifeMax;
-    if (hero.getLifeMax < 176) {
+    document.querySelector(".life-value").innerHTML = hero.lifeMax;
+    if (hero.lifeMax < 176) {
         // bad stat
         document.querySelector(".life-value").style.color = "red";
-    } else if (hero.getLifeMax > 175 && hero.getLifeMax < 225) {
+    } else if (hero.lifeMax > 175 && hero.lifeMax < 225) {
         // medium stat
         document.querySelector(".life-value").style.color = "yellow";
     } else {
@@ -27,11 +20,11 @@ function generateHero() {
     }
 
     setTimeout(function(){
-        document.querySelector(".atk-value").innerHTML = hero.getAtk;
-        if (hero.getAtk < 46) {
+        document.querySelector(".atk-value").innerHTML = hero.atk;
+        if (hero.atk < 46) {
             // bad stat
             document.querySelector(".atk-value").style.color = "red";
-        } else if (hero.getAtk > 45 && hero.getAtk < 55) {
+        } else if (hero.atk > 45 && hero.atk < 55) {
             // medium stat
             document.querySelector(".atk-value").style.color = "yellow";
         } else {
@@ -41,11 +34,11 @@ function generateHero() {
     }, 1200);
 
     setTimeout(function(){
-        document.querySelector(".def-value").innerHTML = hero.getDef;
-        if (hero.getDef < 46) {
+        document.querySelector(".def-value").innerHTML = hero.def;
+        if (hero.def < 46) {
             // bad stat
             document.querySelector(".def-value").style.color = "red";
-        } else if (hero.getDef > 45 && hero.getDef < 55) {
+        } else if (hero.def > 45 && hero.def < 55) {
             // medium stat
             document.querySelector(".def-value").style.color = "yellow";
         } else {
@@ -55,11 +48,11 @@ function generateHero() {
     }, 2400);
 
     setTimeout(function(){
-        document.querySelector(".int-value").innerHTML = hero.getInt;
-        if (hero.getInt < 46) {
+        document.querySelector(".int-value").innerHTML = hero.int;
+        if (hero.int < 46) {
             // bad stat
             document.querySelector(".int-value").style.color = "red";
-        } else if (hero.getInt > 45 && hero.getInt < 55) {
+        } else if (hero.int > 45 && hero.int < 55) {
             // medium stat
             document.querySelector(".int-value").style.color = "yellow";
         } else {
@@ -69,11 +62,11 @@ function generateHero() {
     }, 3600);
 
     setTimeout(function(){
-        document.querySelector(".agi-value").innerHTML = hero.getAgi;
-        if (hero.getAgi < 46) {
+        document.querySelector(".agi-value").innerHTML = hero.agi;
+        if (hero.agi < 46) {
             // bad stat
             document.querySelector(".agi-value").style.color = "red";
-        } else if (hero.getAgi > 45 && hero.getAgi < 55) {
+        } else if (hero.agi > 45 && hero.agi < 55) {
             // medium stat
             document.querySelector(".agi-value").style.color = "yellow";
         } else {
@@ -83,11 +76,11 @@ function generateHero() {
     }, 4800);
 
     setTimeout(function(){
-        document.querySelector(".potion-value").innerHTML = hero.getPotion;
-        if (hero.getPotion === 1) {
+        document.querySelector(".potion-value").innerHTML = hero.nbrPotion;
+        if (hero.nbrPotion === 1) {
             // bad stat
             document.querySelector(".potion-value").style.color = "red";
-        } else if (hero.getPotion === 2) {
+        } else if (hero.nbrPotion === 2) {
             // medium stat
             document.querySelector(".potion-value").style.color = "yellow";
         } else {
@@ -103,6 +96,7 @@ function generateHero() {
     document.querySelector('#generate').style.color = "#212121";
     document.querySelector('#generate').style.borderColor = "#212121";
     document.querySelector('#generate').style.backgroundColor = "#616161";
+
 }
 
 function counter() {
@@ -128,10 +122,12 @@ function counter() {
     }, 7200);
     setTimeout(function(){
         startExploration();
-    }, 8400);
+    }, 1); //8400);
 }
 
 // exploration start in easy mode
+let mode = 1;
+
 function startExploration() {
     document.querySelector('.view-create').style.opacity = "0";
     document.querySelector('.game').style.backgroundColor = "#000";
@@ -148,17 +144,28 @@ document.querySelector("#right-to-left").addEventListener("click", leftChoice);
 document.querySelector("#right-to-top").addEventListener("click", topChoice);
 
 function leftChoice() {
+    mode = 2;
     document.querySelector(".view-left").style.right = "0";
     document.querySelector(".view-top").style.bottom = "100vh";
     document.querySelector(".view-right").style.left = "100vw";
+
+    // fight test
+
 }
 function topChoice() {
+    mode = 1;
     document.querySelector(".view-top").style.bottom = "0";
     document.querySelector(".view-left").style.right = "100vw";
     document.querySelector(".view-right").style.left = "100vw";
+
+    // fight test
+    generateMonster(mode);
 }
 function rightChoice() {
+    mode = 3;
     document.querySelector(".view-right").style.left = "0";
     document.querySelector(".view-top").style.bottom = "100vh";
     document.querySelector(".view-left").style.right = "100vw";
+
+    // fight test
 }
