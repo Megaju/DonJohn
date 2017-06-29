@@ -43,12 +43,15 @@ function generateMonster(mode) {
     } // monster generated
 }
 
+// fight
 function startFight(monster) {
     if (hero.agi >= monster.agi) {
+        log('========================================================');
         log(`STATS MONSTRE => life : ${monster.life} atk : ${monster.atk} def : ${monster.def} agi : ${monster.agi}`)
         log(`${hero.name} commence le combat avec ${hero.agi} AGI contre ${monster.agi}.`);
         agiTest(monster, hero);
     } else {
+        log('========================================================');
         log(`Le monstre commence le combat avec ${monster.agi} AGI contre ${hero.agi}.`);
         agiTest(hero, monster);
     }

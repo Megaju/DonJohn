@@ -87,9 +87,11 @@ function generateHero() {
             // good stat
             document.querySelector(".potion-value").style.color = "green";
         }
-
-        counter();
     }, 6000);
+
+    setTimeout(function(){
+        startExploration();
+    }, 7200);
 
     // modify button
     document.querySelector('#generate').style.textDecoration = "line-through";
@@ -97,32 +99,6 @@ function generateHero() {
     document.querySelector('#generate').style.borderColor = "#212121";
     document.querySelector('#generate').style.backgroundColor = "#616161";
 
-}
-
-function counter() {
-    // counter
-    setTimeout(function(){
-        document.querySelector('.counter').style.opacity = ".9";
-        document.querySelector(".counter-number").innerHTML = '5';
-    }, 1200);
-    setTimeout(function(){
-        document.querySelector(".counter-number").innerHTML = '4';
-    }, 2400);
-    setTimeout(function(){
-        document.querySelector(".counter-number").innerHTML = '3';
-    }, 3600);
-    setTimeout(function(){
-        document.querySelector(".counter-number").innerHTML = '2';
-    }, 4800);
-    setTimeout(function(){
-        document.querySelector(".counter-number").innerHTML = '1';
-    }, 6000);
-    setTimeout(function(){
-        document.querySelector(".counter-number").innerHTML = 'GO!';
-    }, 7200);
-    setTimeout(function(){
-        startExploration();
-    }, 1); //8400);
 }
 
 // exploration start in easy mode
