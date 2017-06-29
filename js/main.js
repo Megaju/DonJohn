@@ -8,10 +8,10 @@ function generateHero() {
 
     // display the values
     document.querySelector(".life-value").innerHTML = hero.lifeMax;
-    if (hero.lifeMax < 176) {
+    if (hero.lifeMax < 1185) {
         // bad stat
         document.querySelector(".life-value").style.color = "red";
-    } else if (hero.lifeMax > 175 && hero.lifeMax < 225) {
+    } else if (hero.lifeMax > 1185 && hero.lifeMax < 1560) {
         // medium stat
         document.querySelector(".life-value").style.color = "yellow";
     } else {
@@ -150,7 +150,7 @@ function leftChoice() {
     document.querySelector(".view-right").style.left = "100vw";
 
     // fight test
-
+    generateMonster(mode);
 }
 function topChoice() {
     mode = 1;
@@ -168,4 +168,5 @@ function rightChoice() {
     document.querySelector(".view-left").style.right = "100vw";
 
     // fight test
+    generateMonster(mode);
 }

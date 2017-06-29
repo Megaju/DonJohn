@@ -81,7 +81,7 @@ class DonJohn {
 // generate values
 let hero = new DonJohn(
     "Don John",
-    150 + (Math.floor(Math.random() * (1 - 100)) + 101), //life
+    1000 + (Math.floor(Math.random() * (1 - 750)) + 751), //life
     Math.floor(Math.random() * (40 - 60)) + 61, //atk
     Math.floor(Math.random() * (2 - 6)) + 7, //def
     Math.floor(Math.random() * (40 - 60)) + 61, //int
