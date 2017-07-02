@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Don John - LE JEU</title>
+    <!-- font -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- style -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/console.css">
     <!-- script js -->
     <script src="js/donjohn.js"></script>
     <script src="js/monster.js"></script>
@@ -69,28 +72,32 @@
             </div>
         </div>
 
+        <div class="console-container">
+            <div id="console"></div>
+        </div>
+
         <!-- the dungeon -->
         <div class="view-left">
             <!-- level medium -->
             <div class="triple-choice">
-                <button id="left-to-top" class="btn btn-start">en avant</button>
-                <button id="left-to-right" class="btn btn-start">à droite</button>
+                <button id="left-to-top" class="btn btn-start"><i class="fa fa-angle-double-up" aria-hidden="true"></i> en avant <i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+                <button id="left-to-right" class="btn btn-start">à droite <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
             </div>
         </div>
 
         <div class="view-top">
             <!-- level easy -->
             <div class="triple-choice">
-                <button id="top-to-left" class="btn btn-start">à gauche</button>
-                <button id="top-to-right" class="btn btn-start">à droite</button>
+                <button id="top-to-left" class="btn btn-start"><i class="fa fa-angle-double-left" aria-hidden="true"></i> à gauche</button>
+                <button id="top-to-right" class="btn btn-start">à droite <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
             </div>
         </div>
 
         <div class="view-right">
             <!-- level hard -->
             <div class="triple-choice">
-                <button id="right-to-left" class="btn btn-start">à gauche</button>
-                <button id="right-to-top" class="btn btn-start">en avant</button>
+                <button id="right-to-left" class="btn btn-start"><i class="fa fa-angle-double-left" aria-hidden="true"></i> à gauche</button>
+                <button id="right-to-top" class="btn btn-start"><i class="fa fa-angle-double-up" aria-hidden="true"></i> en avant <i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
             </div>
         </div>
 
@@ -113,6 +120,7 @@
     <!-- -------------------------------------------------------------------------------- -->
 
     <script src="js/main.js"></script>
+    <script src="js/console.js"></script>
     <script src="js/fight.js"></script>
 </body>
 </html>

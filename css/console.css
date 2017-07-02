@@ -1,0 +1,31 @@
+.console-container {
+    position: relative;
+    padding: 6px;
+    width: 100vw;
+    height: 88px;
+    background-color: #211;
+    text-align: left;
+    z-index: 999;
+}
+
+.console-container div p {
+    font-size: .85em;
+    color: #F4AF7E;
+}
+
+.console-container div p:nth-child(odd) {
+    color: #C18E4B;
+}
+
+.console-container div {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100vw - 8px);
+    height: 92px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    border: 2px solid #C18E4B;
+    border-radius: 3px;
+    background-color: transparent;
+}

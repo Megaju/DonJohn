@@ -83,7 +83,7 @@ let hero = new DonJohn(
     "Don John",
     1000 + (Math.floor(Math.random() * (1 - 750)) + 751), //life
     Math.floor(Math.random() * (40 - 60)) + 61, //atk
-    Math.floor(Math.random() * (2 - 6)) + 7, //def
+    Math.floor(Math.random() * (10 - 20)) + 21, //def
     Math.floor(Math.random() * (40 - 60)) + 61, //int
     Math.floor(Math.random() * (40 - 60)) + 61, //agi
     Math.floor(Math.random() * (0 - 3)) + 4); //potion
