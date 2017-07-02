@@ -139,7 +139,7 @@ function rightChoice() {
 }
 
 function openDoor(mode) {
-    document.querySelector(".console-container").style.display = "block";
+    document.querySelector(".game-view").style.display = "block";
     generateMonster(mode);
 }
 

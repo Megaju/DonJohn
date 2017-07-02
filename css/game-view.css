@@ -1,5 +1,12 @@
-.console-container {
+.game-view {
     display: none;
+    position: absolute;
+    height: 80vh;
+    background-color: #111;
+}
+
+/* GAME VIEW */
+.console-container {
     position: relative;
     padding: 6px;
     width: 100vw;
