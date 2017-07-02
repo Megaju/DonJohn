@@ -1,4 +1,5 @@
 .console-container {
+    display: none;
     position: relative;
     padding: 6px;
     width: 100vw;

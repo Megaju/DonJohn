@@ -4,6 +4,7 @@
 // create monster
 function generateMonster(mode) {
     if (mode === 1) {
+        // esay mode
         log("Création dun monstre facile.");
         var eMonster = new Monster(
             "Easy Monster",
@@ -18,6 +19,7 @@ function generateMonster(mode) {
 
     } else if (mode === 2) {
         // normal mode
+        log("Création dun monstre normal.");
         var nMonster = new Monster(
             "Normal Monster",
             "Description de test. Mais on va dire que ce monstre est pas beau.",
@@ -30,6 +32,7 @@ function generateMonster(mode) {
         startFight(nMonster);
     } else if (mode === 3) {
         // hard mode
+        log("Création dun monstre difficile.");
         var hMonster = new Monster(
             "Hard Monster",
             "Description de test. Mais on va dire que ce monstre est pas beau.",

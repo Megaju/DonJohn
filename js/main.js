@@ -102,7 +102,7 @@ function generateHero() {
 }
 
 // exploration start in easy mode
-let mode = 1;
+var mode = 1;
 
 function startExploration() {
     document.querySelector('.view-create').style.opacity = "0";
@@ -124,25 +124,32 @@ function leftChoice() {
     document.querySelector(".view-left").style.right = "0";
     document.querySelector(".view-top").style.bottom = "100vh";
     document.querySelector(".view-right").style.left = "100vw";
-
-    // fight test
-    generateMonster(mode);
 }
 function topChoice() {
     mode = 1;
     document.querySelector(".view-top").style.bottom = "0";
     document.querySelector(".view-left").style.right = "100vw";
     document.querySelector(".view-right").style.left = "100vw";
-
-    // fight test
-    generateMonster(mode);
 }
 function rightChoice() {
     mode = 3;
     document.querySelector(".view-right").style.left = "0";
     document.querySelector(".view-top").style.bottom = "100vh";
     document.querySelector(".view-left").style.right = "100vw";
+}
 
-    // fight test
+function openDoor(mode) {
+    document.querySelector(".console-container").style.display = "block";
     generateMonster(mode);
 }
+
+// tap on the door
+document.querySelector(".view-top").addEventListener("click", function(){
+    openDoor(mode);
+});
+document.querySelector(".view-left").addEventListener("click", function(){
+    openDoor(mode);
+});
+document.querySelector(".view-right").addEventListener("click", function(){
+    openDoor(mode);
+});
