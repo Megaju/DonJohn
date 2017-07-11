@@ -9,7 +9,6 @@ Demo here : https://megaju.github.io/DonJohn/game.html
 
 Too test a fight, make this choice : "à gauche" -> "en avant" and open your console.
 
+## Credits
 
-
-
-- Ju
+Monster by JosephSeraph : http://lightningseraph.tumblr.com/
