@@ -10,3 +10,14 @@ function write(t, c) {
     var e = document.getElementById(c);
     e.appendChild(p);
 }
+
+function createImage(image, width, height, alt, c) {
+    var img = document.createElement("IMG");
+    img.setAttribute("src", "assets/monsters/"+image+".png");
+    img.setAttribute("width", width);
+    img.setAttribute("height", height);
+    img.setAttribute("alt", alt);
+
+    var e = document.getElementById(c);
+    e.appendChild(img);
+}

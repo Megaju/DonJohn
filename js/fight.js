@@ -4,11 +4,11 @@
 // create monster
 function generateMonster(mode) {
     if (mode === 1) {
-        // esay mode
-        log("Création dun monstre facile.");
+        // easy mode
+        log("Création d'un monstre facile.");
         var eMonster = new Monster(
-            "Easy Monster",
-            "Description de test. Mais on va dire que ce monstre est pas beau.",
+            "Slime", //name
+            ["Slime", 64, 64, "slime illustration"], //image
             100 + (Math.floor(Math.random() * (1 - 50)) + 51), //life
             Math.floor(Math.random() * (20 - 40)) + 41, //atk
             Math.floor(Math.random() * (1 - 4)) + 5, //def
@@ -18,10 +18,10 @@ function generateMonster(mode) {
         startFight(eMonster);
     } else if (mode === 2) {
         // normal mode
-        log("Création dun monstre normal.");
+        log("Création d'un monstre normal.");
         var nMonster = new Monster(
             "Normal Monster",
-            "Description de test. Mais on va dire que ce monstre est pas beau.",
+            ["Slime", 64, 64, "slime illustration"], //image
             150 + (Math.floor(Math.random() * (1 - 100)) + 101), //life
             Math.floor(Math.random() * (30 - 50)) + 51, //atk
             Math.floor(Math.random() * (2 - 6)) + 7, //def
@@ -31,10 +31,10 @@ function generateMonster(mode) {
         startFight(nMonster);
     } else if (mode === 3) {
         // hard mode
-        log("Création dun monstre difficile.");
+        log("Création d'un monstre difficile.");
         var hMonster = new Monster(
             "Hard Monster",
-            "Description de test. Mais on va dire que ce monstre est pas beau.",
+            ["Slime", 64, 64, "slime illustration"], //image
             200 + (Math.floor(Math.random() * (1 - 200)) + 201), //life
             Math.floor(Math.random() * (60 - 100)) + 101, //atk
             Math.floor(Math.random() * (4 - 12)) + 13, //def
@@ -49,6 +49,7 @@ function generateMonster(mode) {
 function startFight(monster) {
     if (hero.agi >= monster.agi) {
         write(`${monster.name}`, 'name');
+        createImage(monster.image[0], monster.image[1], monster.image[2], monster.image[3], 'image');
         log(`STATS MONSTRE => life : ${monster.life} atk : ${monster.atk} def : ${monster.def} agi : ${monster.agi}`)
         write(`> ${hero.name} commence le combat avec ${hero.agi} AGI contre ${monster.agi}.`, 'console');
         agiTest(monster, hero);

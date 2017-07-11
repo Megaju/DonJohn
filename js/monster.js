@@ -2,7 +2,7 @@
  * Created by j on 28/06/17.
  */
 class Monster {
-    constructor(name, description, life, atk, def, int, agi, nbrPotion) {
+    constructor(name, image, life, atk, def, int, agi, nbrPotion) {
         this._lifeMax = life;
         this._life = life;
         this._atk = atk;
@@ -11,23 +11,15 @@ class Monster {
         this._agi = agi;
         this._nbrPotion = nbrPotion;
         this._name = name;
-        this._description = description;
+        this._image = image;
     }
 
     get name() {
         return this._name;
     }
 
-    set name(value) {
-        this._name = value;
-    }
-
-    get description() {
-        return this._description;
-    }
-
-    set description(value) {
-        this._description = value;
+    get image() {
+        return this._image;
     }
 
     get lifeMax() {

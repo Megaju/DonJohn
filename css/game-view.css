@@ -49,3 +49,15 @@
     text-transform: uppercase;
     overflow-y: hidden;
 }
+
+/* monster image */
+.image-container {
+    height: calc(80vh - 148px);
+}
+
+.image-container .image {
+    height: calc(80vh - 144px);
+    text-align: center;
+    line-height: calc(80vh - 72px);
+    overflow-y: hidden;
+}
