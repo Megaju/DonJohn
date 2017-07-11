@@ -6,7 +6,9 @@
 }
 
 /* GAME VIEW */
-.console-container {
+
+/* basic for console */
+[class*="-container"] {
     position: relative;
     padding: 6px;
     width: 100vw;
@@ -16,16 +18,16 @@
     z-index: 999;
 }
 
-.console-container div p {
+[class*="-container"] div p {
     font-size: .85em;
     color: #F4AF7E;
 }
 
-.console-container div p:nth-child(odd) {
+[class*="-container"] div p:nth-child(odd) {
     color: #C18E4B;
 }
 
-.console-container div {
+[class*="-container"] div {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -36,4 +38,14 @@
     border: 2px solid #C18E4B;
     border-radius: 3px;
     background-color: transparent;
+}
+
+/* monster name */
+[class*="-container"] .name {
+    text-align: center;
+    line-height: 88px;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow-y: hidden;
 }

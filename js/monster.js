@@ -3,8 +3,6 @@
  */
 class Monster {
     constructor(name, description, life, atk, def, int, agi, nbrPotion) {
-        this.name = name;
-        this.description = description;
         this._lifeMax = life;
         this._life = life;
         this._atk = atk;
@@ -12,6 +10,24 @@ class Monster {
         this._int = int;
         this._agi = agi;
         this._nbrPotion = nbrPotion;
+        this._name = name;
+        this._description = description;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(value) {
+        this._name = value;
+    }
+
+    get description() {
+        return this._description;
+    }
+
+    set description(value) {
+        this._description = value;
     }
 
     get lifeMax() {

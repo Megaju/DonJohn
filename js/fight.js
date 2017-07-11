@@ -16,7 +16,6 @@ function generateMonster(mode) {
             Math.floor(Math.random() * (20 - 40)) + 41, //agi
             0); //potion
         startFight(eMonster);
-
     } else if (mode === 2) {
         // normal mode
         log("Création dun monstre normal.");
@@ -49,25 +48,26 @@ function generateMonster(mode) {
 // fight
 function startFight(monster) {
     if (hero.agi >= monster.agi) {
+        write(`${monster.name}`, 'name');
         log(`STATS MONSTRE => life : ${monster.life} atk : ${monster.atk} def : ${monster.def} agi : ${monster.agi}`)
-        gameConsole(`> ${hero.name} commence le combat avec ${hero.agi} AGI contre ${monster.agi}.`);
+        write(`> ${hero.name} commence le combat avec ${hero.agi} AGI contre ${monster.agi}.`, 'console');
         agiTest(monster, hero);
     } else {
-        gameConsole(`> Le monstre commence le combat avec ${monster.agi} AGI contre ${hero.agi}.`);
+        write(`> Le monstre commence le combat avec ${monster.agi} AGI contre ${hero.agi}.`, 'console');
         agiTest(hero, monster);
     }
 }
 
 function agiTest(target, attacker) {
-    gameConsole(`> ${attacker.name} attaque ${target.name} !`);
+    write(`> ${attacker.name} attaque ${target.name} !`, 'console');
 
     let dice = Math.floor(Math.random() * (0 - 100)) + 101;
 
     if (dice <= target.agi) {
-        gameConsole(`> ${target.name} esquive l'attaque et va attaquer !`);
+        write(`> ${target.name} esquive l'attaque et va attaquer !`, 'console');
         calcDmg(target, attacker);
     } else {
-        gameConsole(`> ${target.name} tente une esquive mais rate...`);
+        write(`> ${target.name} tente une esquive mais rate...`, 'console');
         calcDmg(attacker, target);
     }
 }
@@ -75,16 +75,16 @@ function agiTest(target, attacker) {
 function calcDmg(attacker, target) {
     let dmg = attacker.atk - target.def;
 
-    gameConsole(`${attacker.name} cause ${dmg} de dégats à ${target.name} !`)
+    write(`${attacker.name} cause ${dmg} de dégats à ${target.name} !`, 'console')
     dmg = target.life - dmg;
     target._life = dmg;
 
     if (target.life <= 0) {
         target._life = 0;
-        gameConsole(`>Il reste ${target.life}/${target.lifeMax} PV à ${target.name}`);
-        return gameConsole(`${attacker.name} gagne le combat !`);
+        write(`>Il reste ${target.life}/${target.lifeMax} PV à ${target.name}`, 'console');
+        return write(`${attacker.name} gagne le combat !`);
     } else {
-        gameConsole(`>Il reste ${target.life}/${target.lifeMax} PV à ${target.name}`);
+        write(`>Il reste ${target.life}/${target.lifeMax} PV à ${target.name}`, 'console');
         agiTest(attacker, target);
     }
 }
